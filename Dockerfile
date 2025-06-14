@@ -1,11 +1,12 @@
-# Use uma imagem oficial do OpenJDK com Java 17
-FROM openjdk:17-jdk-slim
-
-# Diretorio de trabalho dentro do container
+# Estágio de build
+FROM maven:3.9.6-eclipse-temurin-17 AS build
 WORKDIR /app
+COPY pom.xml .
+COPY src ./src
+RUN mvn package
 
-# Copia o JAR gerado pelo Maven
-COPY target/MeuPortifolio-0.0.1-SNAPSHOT.jar app.jar
-
-# Executa o projeto
+# Estágio de execução
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
