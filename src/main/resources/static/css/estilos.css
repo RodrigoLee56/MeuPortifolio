@@ -1,0 +1,39 @@
+.p-justify{
+	text-align: justify;
+}
+
+/* Cada projeto é uma linha flexível (substitui .row) */
+.flex-projeto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Coluna da imagem e coluna do texto */
+.project-image, .project-texto {
+  flex: 1 1 50%;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .flex-projeto {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-projeto {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-image, .project-texto {
+    flex: 1 1 100%;
+  }
+
+  .project-texto a {
+    display: inline-block;
+  }
+}
