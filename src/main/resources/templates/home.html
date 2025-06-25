@@ -1,81 +1,86 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="pt" xml:lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Rodrigo Barbosa - Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"  rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rodrigo Barbosa De Sousa - Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" th:href="@{/css/estilos.css}" />
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" th:href="@{/}">Rodrigo Barbosa</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
+<nav class="navbar is-fixed-top has-background-black" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item has-text-weight-bold has-text-gold" th:href="@{/}">
+            Rodrigo Barbosa De Sousa
+        </a>
+        <button type="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();}">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link me-2" th:href="@{/projetos}">Projetos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{/contato}">Contato</a>
-                </li>
-            </ul>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+            <a class="navbar-item has-text-gold" th:href="@{/projetos}">Projetos</a>
+            <a class="navbar-item has-text-gold" th:href="@{/contato}">Contato</a>
         </div>
     </div>
 </nav>
 
 <!-- Banner Principal -->
-<section class="bg-primary text-white text-center py-5 mb-4">
+<section class="section has-background-black has-text-centered has-text-gold">
     <div class="container">
-        <h1 class="display-4 fw-bold">Olá, eu sou Rodrigo Barbosa</h1>
-        <p class="lead">Engenheiro Java Fullstack em formação | Estudando desde 2015 | Buscando minha primeira oportunidade</p>
-        <a th:href="@{/projetos}" class="btn btn-light btn-lg mt-3">Ver Meus Projetos</a>
+        <h1 class="title is-2 is-size-3-mobile has-text-gold">Olá, eu sou Rodrigo Barbosa De Sousa</h1>
+        <p class="subtitle is-5 is-size-6-mobile">Engenheiro Java Fullstack em formação | Estudando desde 2017 | Buscando minha primeira oportunidade</p>
+        <a th:href="@{/projetos}" class="button is-light is-medium mt-4 has-background-gold">Ver Meus Projetos</a>
     </div>
 </section>
 
 <!-- Sobre Mim -->
-<section class="container my-5">
-    <div class="row align-items-center">
-        <div class="col-md-4 text-center">
-            <img src="/images/perfil.png" alt="Foto de Rodrigo Barbosa" class="img-fluid rounded-circle mb-3" style="width: 200px;">
-            <h4>Rodrigo Barbosa De Sousa</h4>
-            <p>Estudando Java há mais de 9 anos. Desenvolvendo projetos pessoais.</p>
-        </div>
-        <div class="col-md-8">
-            <h3>Sobre Mim</h3>
-            <p class="p-justify">Olá! Meu nome é Rodrigo Barbosa De Sousa. Tenho 32 anos e estou em busca da minha primeira oportunidade como Engenheiro Java Fullstack.</p>
-            <p class="p-justify">Estudo desenvolvimento desde os 23 anos, mergulhando fundo em Java, frameworks como Spring Boot e tecnologias web. Nesse portfólio reúno meus melhores projetos, mostrando minhas habilidades técnicas e minha evolução ao longo dos anos.</p>
-            <p class="p-justify">Acredito que a prática constante e a resolução de problemas reais são fundamentais para se tornar um profissional sólido. Por isso, todos os projetos aqui foram feitos por mim, do zero, com atenção às boas práticas e à arquitetura.</p>
+<section class="section has-background-white has-text-black">
+    <div class="container">
+        <div class="columns is-vcentered is-variable is-8 is-multiline">
+            <div class="column is-12-mobile is-4-desktop has-text-centered">
+                <figure class="image is-128x128 is-inline-block">
+                    <img class="is-rounded border-gold" src="/images/perfil.png" alt="Foto de Rodrigo Barbosa">
+                </figure>
+                <h4 class="title is-4 has-text-gold mt-3">Rodrigo Barbosa De Sousa</h4>
+                <p>Estudando Java há mais de 7 anos. Desenvolvendo projetos pessoais.</p>
+            </div>
+            <div class="column is-12-mobile is-8-desktop">
+                <h3 class="title is-4 has-text-gold">Sobre Mim</h3>
+                <p>Olá! Meu nome é Rodrigo Barbosa De Sousa. Tenho 32 anos e estou em busca da minha primeira oportunidade como Engenheiro Java Fullstack.</p>
+                <p>Estudo desenvolvimento desde os 24 anos, mergulhando fundo em Java, frameworks como Spring Boot e tecnologias web. Nesse portfólio reúno meus melhores projetos, mostrando minhas habilidades técnicas e minha evolução ao longo dos anos.</p>
+                <p>Acredito que a prática constante e a resolução de problemas reais são fundamentais para se tornar um profissional sólido. Por isso, todos os projetos aqui foram feitos por mim, do zero, com atenção às boas práticas e à arquitetura.</p>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Call to Action -->
-<section class="bg-light py-5 mb-5 text-center">
+<section class="section has-background-gold has-text-black has-text-centered">
     <div class="container">
-        <h3 class="fw-bold mb-3">Vamos conversar?</h3>
+        <h3 class="title is-4 mb-3">Vamos conversar?</h3>
         <p>Se você está procurando alguém dedicado, curioso e apaixonado por tecnologia, ficarei feliz em contribuir para sua equipe.</p>
-        <a th:href="@{/contato}" class="btn btn-primary btn-lg">Entrar em Contato</a>
+        <a th:href="@{/contato}" class="button has-background-black has-text-gold is-medium mt-4">Entrar em Contato</a>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-        <p class="mb-0">&copy; 2025 Rodrigo Barbosa De Sousa - Todos os direitos reservados.</p>
-        <div class="mt-2">
-            <a href="https://github.com/RodrigoLee56"  target="_blank" class="text-white me-3">GitHub</a>
-            <a href="https://www.linkedin.com/in/rodrigo-barbosa-de-sousa/"  target="_blank" class="text-white me-3">LinkedIn</a>
-            <a href="mailto:rodrigobarbosadesousa5608@gmail.com" class="text-white">E-mail</a>
+<footer class="footer has-background-black has-text-white">
+    <div class="content has-text-centered">
+        <p>&copy; 2025 Rodrigo Barbosa De Sousa - Todos os direitos reservados.</p>
+        <div class="is-flex is-justify-content-center is-flex-wrap-wrap mt-2">
+            <a href="https://github.com/RodrigoLee56" target="_blank" class="has-text-white mx-3">GitHub</a>
+            <a href="https://www.linkedin.com/in/rodrigo-barbosa-de-sousa/" target="_blank" class="has-text-white mx-3">LinkedIn</a>
+            <a href="mailto:rodrigobarbosadesousa5608@gmail.com" class="has-text-white mx-3">E-mail</a>
         </div>
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
-
+<script src="/js/navbar.js"></script>
 </body>
 </html>

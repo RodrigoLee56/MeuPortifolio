@@ -1,166 +1,131 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Meus Projetos - Rodrigo Barbosa De Sousa</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"  rel="stylesheet">
+    <title>Rodrigo Barbosa - Projetos</title>
+    <!-- Bulma via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> 
+    <!-- Seus estilos personalizados -->
     <link rel="stylesheet" th:href="@{/css/estilos.css}" />
 </head>
-<body>
+<body class="has-background-black has-text-white">
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar bg-black p-4 shadow-md">
     <div class="container">
-        <a class="navbar-brand" th:href="@{/}">Rodrigo Barbosa De Sousa</a>
-        <div class="ms-auto">
-            <a class="btn btn-outline-light me-2" th:href="@{/}">Home</a>
-            <a class="btn btn-outline-light" th:href="@{/contato}">Contato</a>
+        <div class="navbar-brand">
+            <a class="navbar-item gold-text fw-bold">Rodrigo Barbosa</a>
+            <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item gold-text" th:href="@{/}">Home</a>
+                <a class="navbar-item gold-text" th:href="@{/contato}">Contato</a>
+            </div>
         </div>
     </div>
 </nav>
 
-<!-- Título -->
-<section class="py-5">
-    <div class="container">
-        <h2 class="fw-bold mb-4 text-center">Meus Projetos</h2>
-        <p class="text-center text-muted">Veja abaixo os projetos que desenvolvi nos últimos anos estudando Java e tecnologias web.</p>
+<!-- Hero -->
+<section class="hero bg-black py-6">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title is-1 gold-text">Meus Projetos</h1>
+            <p class="subtitle is-5 text-white">Aqui estão alguns dos projetos que desenvolvi até agora</p>
+        </div>
     </div>
 </section>
 
-<!-- Lista de Projetos -->
-<div class="container pb-5">
-
-    <!-- Projeto 1 -->
-    <div class="flex-projeto mb-5">
-        <div class="col-md-6 project-image">
-            <div id="carouselProjeto1" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
-                <div class="carousel-inner rounded">
-                    <div class="carousel-item active">
-                        <img src="/images/projeto1_1.png" class="d-block w-100" alt="Imagem do Projeto 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/images/projeto1_2.png" class="d-block w-100" alt="Imagem do Projeto 1">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjeto1" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselProjeto1" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
+<!-- Projeto 1 -->
+<section class="section bg-white text-black">
+    <div class="container">
+        <div class="columns is-multiline is-vcentered">
+            <div class="column is-half has-text-centered">
+                <figure class="image is-4by3 mb-4">
+                    <img src="/images/projeto1-slide1.jpg" alt="Slide 1">
+                </figure>
+                <figure class="image is-4by3 mb-4 hidden">
+                    <img src="/images/projeto1-slide2.jpg" alt="Slide 2">
+                </figure>
+                <button class="button is-rounded gold-button mt-2 mr-2">←</button>
+                <button class="button is-rounded gold-button mt-2">→</button>
+            </div>
+            <div class="column is-half">
+                <h4 class="title is-3 gold-text">Sistema Financeiro</h4>
+                <p>Desenvolvi um sistema completo para controle de entradas e saídas financeiras com Spring Boot, JPA e H2 Database.</p>
+                <p><strong>Tecnologias usadas:</strong></p>
+                <ul>
+                    <li>Java 17</li>
+                    <li>Spring Boot</li>
+                    <li>JPA / Hibernate</li>
+                </ul>
+                <a href="#" class="btn-gold button mt-2">Ver no GitHub</a>
             </div>
         </div>
-        <div class="col-md-6">
-            <h4 class="text-primary fw-bold">Sistema Financeiro da Igreja</h4>
-            <p>Um sistema completo para controle de entradas e saídas financeiras de uma igreja local, com registros detalhados e interface intuitiva.</p>
-            <a href="https://github.com/RodrigoLee56/projeto1"  target="_blank" class="btn btn-success mt-2">
-                Ver no GitHub
-            </a>
-        </div>
     </div>
+</section>
 
-    <!-- Projeto 2 -->
-    <div class="flex-projeto mb-5">
-        <div class="col-md-6 project-image">
-            <div id="carouselProjeto2" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
-                <div class="carousel-inner rounded">
-                    <div class="carousel-item active">
-                        <img src="/images/projeto2_01.png" class="d-block w-100" alt="Projeto 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/images/projeto2_02.png" class="d-block w-100" alt="Projeto 2">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjeto2" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselProjeto2" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
+<!-- Projeto 2 -->
+<section class="section bg-gray-100 text-black">
+    <div class="container">
+        <div class="columns is-multiline is-vcentered">
+            <div class="column is-half has-text-centered">
+                <figure class="image is-4by3 mb-4">
+                    <img src="/images/projeto2-slide1.jpg" alt="Slide 1">
+                </figure>
+                <figure class="image is-4by3 mb-4 hidden">
+                    <img src="/images/projeto2-slide2.jpg" alt="Slide 2">
+                </figure>
+                <button class="button is-rounded gold-button mt-2 mr-2">←</button>
+                <button class="button is-rounded gold-button mt-2">→</button>
+            </div>
+            <div class="column is-half">
+                <h4 class="title is-3 gold-text">Aluguel de Motos</h4>
+                <p>Um sistema de aluguel de motocicletas com cadastro de clientes, motos e controle de locação.</p>
+                <p><strong>Tecnologias usadas:</strong></p>
+                <ul>
+                    <li>Java 17</li>
+                    <li>Spring Boot</li>
+                    <li>JPA / REST API</li>
+                </ul>
+                <a href="#" class="btn-gold button mt-2">Ver no GitHub</a>
             </div>
         </div>
-        <div class="col-md-6">
-            <h4 class="text-primary fw-bold">Aluguel de Motos</h4>
-            <p>Aplicação para gerenciamento de aluguéis de motocicletas, com controle de disponibilidade, histórico de uso e gestão de clientes.</p>
-            <a href="https://github.com/RodrigoLee56/projeto2"  target="_blank" class="btn btn-success mt-2">
-                Ver no GitHub
-            </a>
-        </div>
     </div>
-    
-    <!-- Projeto 1 -->
-    <div class="flex-projeto mb-5">
-        <div class="col-md-6 project-image">
-            <div id="carouselProjeto1" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
-                <div class="carousel-inner rounded">
-                    <div class="carousel-item active">
-                        <img src="/images/projeto1_1.png" class="d-block w-100" alt="Imagem do Projeto 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/images/projeto1_2.png" class="d-block w-100" alt="Imagem do Projeto 1">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjeto1" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselProjeto1" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <h4 class="text-primary fw-bold">Sistema Financeiro da Igreja</h4>
-            <p>Um sistema completo para controle de entradas e saídas financeiras de uma igreja local, com registros detalhados e interface intuitiva.</p>
-            <a href="https://github.com/RodrigoLee56/projeto1"  target="_blank" class="btn btn-success mt-2">
-                Ver no GitHub
-            </a>
-        </div>
-    </div>
-
-    <!-- Projeto 2 -->
-    <div class="flex-projeto mb-5">
-        <div class="col-md-6 project-image">
-            <div id="carouselProjeto2" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
-                <div class="carousel-inner rounded">
-                    <div class="carousel-item active">
-                        <img src="/images/projeto2_01.png" class="d-block w-100" alt="Projeto 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/images/projeto2_02.png" class="d-block w-100" alt="Projeto 2">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjeto2" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselProjeto2" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <h4 class="text-primary fw-bold">Aluguel de Motos</h4>
-            <p>Aplicação para gerenciamento de aluguéis de motocicletas, com controle de disponibilidade, histórico de uso e gestão de clientes.</p>
-            <a href="https://github.com/RodrigoLee56/projeto1"  target="_blank" class="btn btn-success mt-2">
-                Ver no GitHub
-            </a>
-        </div>
-    </div>
-
-</div>
-
+</section>
 
 <!-- Footer -->
-<footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-        <p class="mb-0">&copy; 2025 Rodrigo Barbosa De Sousa - Todos os direitos reservados.</p>
-        <div class="mt-2">
-            <a href="https://github.com/RodrigoLee56"  target="_blank" class="text-white me-3">GitHub</a>
-            <a href="https://www.linkedin.com/in/rodrigo-barbosa-de-sousa/"  target="_blank" class="text-white me-3">LinkedIn</a>
-            <a href="mailto:rodrigobarbosadesousa5608@gmail.com" class="text-white">E-mail</a>
+<footer class="footer bg-black text-white text-center">
+    <div class="content has-text-centered">
+        <p>&copy; 2025 Rodrigo Barbosa De Sousa - Todos os direitos reservados.</p>
+        <div class="mt-4">
+            <a class="gold-text mx-3" href="#">GitHub</a>
+            <a class="gold-text mx-3" href="#">LinkedIn</a>
         </div>
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+<script>
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        let index = 0;
+        const items = carousel.querySelectorAll('.carousel-inner > figure');
+        carousel.querySelector('.carousel-control-prev')?.addEventListener('click', () => {
+            items[index].classList.add('hidden');
+            index = (index - 1 + items.length) % items.length;
+            items[index].classList.remove('hidden');
+        });
+        carousel.querySelector('.carousel-control-next')?.addEventListener('click', () => {
+            items[index].classList.add('hidden');
+            index = (index + 1) % items.length;
+            items[index].classList.remove('hidden');
+        });
+    });
+</script>
+
 </body>
 </html>
