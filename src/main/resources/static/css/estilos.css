@@ -2,6 +2,7 @@
   --gold: #daa520ff;
 }
 
+/* Cores personalizadas */
 .has-text-gold {
   color: var(--gold) !important;
 }
@@ -12,4 +13,56 @@
 
 .border-gold {
   border: 3px solid var(--gold);
+}
+
+/* Ajustes de espaçamento */
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+.mt-6 {
+  margin-top: 3rem !important;
+}
+
+.mx-3 {
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}
+
+.p-4 {
+  padding: 1.5rem !important;
+}
+
+.pt-6 {
+  padding-top: 3rem !important;
+}
+
+.py-5 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+/* Estilo para sombra */
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajuste do botão dourado no hover */
+.button.has-background-black:hover {
+  background-color: #333333 !important;
+}
+
+/* Responsividade refinada */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    background-color: #000;
+  }
+
+  .navbar-burger {
+    color: var(--gold);
+  }
 }
