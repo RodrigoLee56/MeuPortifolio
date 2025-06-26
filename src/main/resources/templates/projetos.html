@@ -2,60 +2,61 @@
 <html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Rodrigo Barbosa - Projetos</title>
-    <!-- Bulma via CDN -->
+    <title>Rodrigo Barbosa De Sousa - Projetos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> 
-    <!-- Seus estilos personalizados -->
     <link rel="stylesheet" th:href="@{/css/estilos.css}" />
 </head>
 <body class="has-background-black has-text-white">
 
 <!-- Navbar -->
-<nav class="navbar bg-black p-4 shadow-md">
-    <div class="container">
-        <div class="navbar-brand">
-            <a class="navbar-item gold-text fw-bold">Rodrigo Barbosa</a>
-            <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
+<nav class="navbar is-fixed-top has-background-black" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item has-text-weight-bold has-text-gold" href="/">
+            Rodrigo Barbosa De Sousa
+        </a>
+        <button type="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();}">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </button>
+    </div>
 
-        <div id="navMenu" class="navbar-menu">
-            <div class="navbar-end">
-                <a class="navbar-item gold-text" th:href="@{/}">Home</a>
-                <a class="navbar-item gold-text" th:href="@{/contato}">Contato</a>
-            </div>
+    <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+            <a class="navbar-item has-text-gold" href="/">Home</a>
+            <a class="navbar-item has-text-gold" href="/contato">Contato</a>
         </div>
     </div>
 </nav>
 
 <!-- Hero -->
-<section class="hero bg-black py-6">
+<section class="hero has-background-black py-6">
     <div class="hero-body">
         <div class="container has-text-centered">
-            <h1 class="title is-1 gold-text">Meus Projetos</h1>
-            <p class="subtitle is-5 text-white">Aqui estão alguns dos projetos que desenvolvi até agora</p>
+            <h1 class="title is-1 has-text-gold">Meus Projetos</h1>
+            <p class="subtitle is-5 has-text-white">Aqui estão alguns dos projetos que desenvolvi até agora</p>
         </div>
     </div>
 </section>
 
 <!-- Projeto 1 -->
-<section class="section bg-white text-black">
+<section class="section has-background-white has-text-black">
     <div class="container">
-        <div class="columns is-multiline is-vcentered">
-            <div class="column is-half has-text-centered">
-                <figure class="image is-4by3 mb-4">
-                    <img src="/images/projeto1-slide1.jpg" alt="Slide 1">
-                </figure>
-                <figure class="image is-4by3 mb-4 hidden">
-                    <img src="/images/projeto1-slide2.jpg" alt="Slide 2">
-                </figure>
-                <button class="button is-rounded gold-button mt-2 mr-2">←</button>
-                <button class="button is-rounded gold-button mt-2">→</button>
+        <div class="columns is-vcentered is-multiline is-reverse-mobile">
+            <div class="column is-12-mobile is-6-tablet has-text-centered">
+                <div class="project-carousel" data-project="1">
+                    <figure class="image is-4by3 mb-4 active-slide">
+                        <img src="/images/projeto1_1.png" alt="Slide 1">
+                    </figure>
+                    <figure class="image is-4by3 mb-4 hidden">
+                        <img src="/images/projeto1_2.png" alt="Slide 2">
+                    </figure>
+                </div>
+                <button class="button is-rounded gold-button mt-2 mr-2 btn-prev" data-project="1">&larr;</button>
+                <button class="button is-rounded gold-button mt-2 btn-next" data-project="1">&rarr;</button>
             </div>
-            <div class="column is-half">
+            <div class="column is-12-mobile is-6-tablet">
                 <h4 class="title is-3 gold-text">Sistema Financeiro</h4>
                 <p>Desenvolvi um sistema completo para controle de entradas e saídas financeiras com Spring Boot, JPA e H2 Database.</p>
                 <p><strong>Tecnologias usadas:</strong></p>
@@ -64,68 +65,23 @@
                     <li>Spring Boot</li>
                     <li>JPA / Hibernate</li>
                 </ul>
-                <a href="#" class="btn-gold button mt-2">Ver no GitHub</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Projeto 2 -->
-<section class="section bg-gray-100 text-black">
-    <div class="container">
-        <div class="columns is-multiline is-vcentered">
-            <div class="column is-half has-text-centered">
-                <figure class="image is-4by3 mb-4">
-                    <img src="/images/projeto2-slide1.jpg" alt="Slide 1">
-                </figure>
-                <figure class="image is-4by3 mb-4 hidden">
-                    <img src="/images/projeto2-slide2.jpg" alt="Slide 2">
-                </figure>
-                <button class="button is-rounded gold-button mt-2 mr-2">←</button>
-                <button class="button is-rounded gold-button mt-2">→</button>
-            </div>
-            <div class="column is-half">
-                <h4 class="title is-3 gold-text">Aluguel de Motos</h4>
-                <p>Um sistema de aluguel de motocicletas com cadastro de clientes, motos e controle de locação.</p>
-                <p><strong>Tecnologias usadas:</strong></p>
-                <ul>
-                    <li>Java 17</li>
-                    <li>Spring Boot</li>
-                    <li>JPA / REST API</li>
-                </ul>
-                <a href="#" class="btn-gold button mt-2">Ver no GitHub</a>
+                <a href="https://github.com/RodrigoLee56/MeuPortifolio" class="btn-gold button mt-2">Ver no GitHub</a>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="footer bg-black text-white text-center">
+<footer class="footer has-background-black has-text-white has-text-centered">
     <div class="content has-text-centered">
         <p>&copy; 2025 Rodrigo Barbosa De Sousa - Todos os direitos reservados.</p>
         <div class="mt-4">
-            <a class="gold-text mx-3" href="#">GitHub</a>
-            <a class="gold-text mx-3" href="#">LinkedIn</a>
+            <a class="gold-text mx-3" href="https://github.com/RodrigoLee56">GitHub</a>
+            <a class="gold-text mx-3" href="https://www.linkedin.com/in/rodrigo-java/">LinkedIn</a>
         </div>
     </div>
 </footer>
 
-<script>
-    document.querySelectorAll('.carousel').forEach(carousel => {
-        let index = 0;
-        const items = carousel.querySelectorAll('.carousel-inner > figure');
-        carousel.querySelector('.carousel-control-prev')?.addEventListener('click', () => {
-            items[index].classList.add('hidden');
-            index = (index - 1 + items.length) % items.length;
-            items[index].classList.remove('hidden');
-        });
-        carousel.querySelector('.carousel-control-next')?.addEventListener('click', () => {
-            items[index].classList.add('hidden');
-            index = (index + 1) % items.length;
-            items[index].classList.remove('hidden');
-        });
-    });
-</script>
-
+<script th:src="@{/js/scripts.js}"></script>
 </body>
 </html>

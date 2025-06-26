@@ -1,68 +1,115 @@
+/* ===========================================
+   PALETA DE CORES
+=========================================== */
 :root {
   --gold: #daa520ff;
+  --black: #000000;
+  --white: #ffffff;
 }
 
-/* Cores personalizadas */
-.has-text-gold {
-  color: var(--gold) !important;
-}
+/* ===========================================
+   CORES UTILITÁRIAS
+=========================================== */
+.has-text-gold { color: var(--gold) !important; }
+.has-background-gold { background-color: var(--gold) !important; }
+.has-background-black { background-color: var(--black) !important; }
+.has-text-black { color: var(--black) !important; }
+.has-text-white { color: var(--white) !important; }
+.gold-text { color: var(--gold) !important; }
+.gold-background { background-color: var(--gold) !important; }
 
-.has-background-gold {
+/* Botões */
+.gold-button {
   background-color: var(--gold) !important;
+  color: var(--black) !important;
+  border: none;
+}
+.gold-button:hover {
+  background-color: #e0b53f !important;
 }
 
-.border-gold {
-  border: 3px solid var(--gold);
-}
-
-/* Ajustes de espaçamento */
-.mt-3 {
-  margin-top: 1rem !important;
-}
-
-.mt-4 {
-  margin-top: 1.5rem !important;
-}
-
-.mt-6 {
-  margin-top: 3rem !important;
-}
-
+/* ===========================================
+   ESPAÇAMENTOS
+=========================================== */
+.mt-2 { margin-top: 0.5rem !important; }
+.mt-4 { margin-top: 1.5rem !important; }
+.mt-6 { margin-top: 3rem !important; }
+.mr-2 { margin-right: 0.5rem !important; }
 .mx-3 {
   margin-left: 1rem !important;
   margin-right: 1rem !important;
 }
-
-.p-4 {
-  padding: 1.5rem !important;
-}
-
-.pt-6 {
+.pt-6 { padding-top: 3rem !important; }
+.py-6 {
   padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 }
 
-.py-5 {
-  padding-top: 2rem !important;
-  padding-bottom: 2rem !important;
+/* ===========================================
+   CARROSSEL DE PROJETOS
+=========================================== */
+.project-carousel img {
+  width: 100%;
+  height: auto;
 }
+.hidden { display: none; }
+.active-slide { display: block; }
 
-/* Estilo para sombra */
-.shadow-md {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-/* Ajuste do botão dourado no hover */
-.button.has-background-black:hover {
-  background-color: #333333 !important;
-}
-
-/* Responsividade refinada */
+/* ===========================================
+   RESPONSIVIDADE
+=========================================== */
 @media screen and (max-width: 768px) {
-  .navbar-menu {
-    background-color: #000;
+  .columns.is-reverse-mobile {
+    flex-direction: column-reverse;
   }
-
+  .navbar-menu {
+    background-color: var(--black);
+  }
   .navbar-burger {
     color: var(--gold);
   }
+  .project-carousel figure {
+    margin-bottom: 1rem;
+  }
+  .column {
+    margin-bottom: 1.5rem;
+  }
+  .hero .title {
+    font-size: 2rem;
+  }
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  .btn-prev,
+  .btn-next {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+  }
+  .navbar-burger.is-active + .navbar-menu {
+    display: block;
+  }
 }
+
+@media screen and (min-width: 786px) {
+  .reverse-columns {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .reverse-columns .column:first-child {
+    order: 1;
+  }
+  .reverse-columns .column:last-child {
+    order: 2;
+  }
+}
+
+/* ===========================================
+   COMPONENTES E SEÇÕES FUTURAS (reservado)
+=========================================== */
+/* Exemplo:
+.section-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+*/
