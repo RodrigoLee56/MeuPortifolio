@@ -1,87 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Rodrigo Barbosa De Sousa - Projetos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        referrerpolicy="no-referrer">
     <link rel="stylesheet" th:href="@{/css/estilos.css}" />
 </head>
+
 <body class="has-background-black has-text-white">
-
-<!-- Navbar -->
-<nav class="navbar is-fixed-top has-background-black" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item has-text-weight-bold has-text-gold" href="/">
-            Rodrigo Barbosa De Sousa
-        </a>
-        <button type="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu" onkeydown="if(event.key==='Enter'||event.key===' '){this.click();}">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </button>
-    </div>
-
-    <div id="navbarMenu" class="navbar-menu">
-        <div class="navbar-end">
-            <a class="navbar-item has-text-gold" href="/">Home</a>
-            <a class="navbar-item has-text-gold" href="/contato">Contato</a>
+    <!-- Navbar -->
+    <nav class="navbar is-fixed-top has-background-black" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item has-text-weight-bold has-text-gold" href="/">
+                Rodrigo Barbosa De Sousa
+            </a>
+            <button type="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu"
+                onkeydown="if(event.key==='Enter'||event.key===' '){this.click();}">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
         </div>
-    </div>
-</nav>
 
-<!-- Hero -->
-<section class="hero has-background-black py-6">
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <h1 class="title is-1 has-text-gold">Meus Projetos</h1>
-            <p class="subtitle is-5 has-text-white">Aqui estão alguns dos projetos que desenvolvi até agora</p>
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item has-text-gold" href="/">Home</a>
+                <a class="navbar-item has-text-gold" href="/contato">Contato</a>
+            </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<!-- Projeto 1 -->
-<section class="section has-background-white has-text-black">
-    <div class="container">
-        <div class="columns is-vcentered is-multiline is-reverse-mobile">
-            <div class="column is-12-mobile is-6-tablet has-text-centered">
-                <div class="project-carousel" data-project="1">
-                    <figure class="image is-4by3 mb-4 active-slide">
-                        <img src="/images/projeto1_1.png" alt="Slide 1">
-                    </figure>
-                    <figure class="image is-4by3 mb-4 hidden">
-                        <img src="/images/projeto1_2.png" alt="Slide 2">
-                    </figure>
+    <!-- Hero -->
+    <section class="hero has-background-black py-6">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1 has-text-gold">Meus Projetos</h1>
+                <p class="subtitle is-5 has-text-white">
+                    Aqui estão alguns dos projetos que desenvolvi até agora
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projeto 1 -->
+    <section class="section has-background-white has-text-black">
+        <div class="container">
+            <div class="columns is-vcentered is-multiline is-reverse-mobile">
+                <div class="column is-12-mobile is-6-tablet has-text-centered">
+                    <div class="project-carousel" data-project="1">
+                        <figure class="image is-4by3 mb-4 active-slide">
+                            <img src="/images/imagem1.png" alt="Slide 1" />
+                        </figure>
+                        <figure class="image is-4by3 mb-4 hidden">
+                            <img src="/images/imagem2.png" alt="Slide 2" />
+                        </figure>
+                        <figure class="image is-4by3 mb-4 hidden">
+                            <img src="/images/imagem3.png" alt="Slide 3" />
+                        </figure>
+                    </div>
+                    <button class="button is-rounded gold-button mt-2 mr-2 btn-prev" data-project="1">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="button is-rounded gold-button mt-2 btn-next" data-project="1">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
-                <button class="button is-rounded gold-button mt-2 mr-2 btn-prev" data-project="1">&larr;</button>
-                <button class="button is-rounded gold-button mt-2 btn-next" data-project="1">&rarr;</button>
-            </div>
-            <div class="column is-12-mobile is-6-tablet">
-                <h4 class="title is-3 gold-text">Sistema Financeiro</h4>
-                <p>Desenvolvi um sistema completo para controle de entradas e saídas financeiras com Spring Boot, JPA e H2 Database.</p>
-                <p><strong>Tecnologias usadas:</strong></p>
-                <ul>
-                    <li>Java 17</li>
-                    <li>Spring Boot</li>
-                    <li>JPA / Hibernate</li>
-                </ul>
-                <a href="https://github.com/RodrigoLee56/MeuPortifolio" class="btn-gold button mt-2">Ver no GitHub</a>
+                <div class="column is-12-mobile is-6-tablet">
+                    <h4 class="title is-3 gold-text">Site Pessoal & Portfólio</h4>
+                    <p class="has-text-justified">
+                        Meu site pessoal, desenvolvido com Java, Spring Boot e Thymeleaf,
+                        que serve como vitrine para meus projetos e habilidades. Possui
+                        formulário de contato integrado via Gmail, design responsivo com
+                        Bulma CSS e está containerizado com Docker para fácil deploy.
+                    </p>
+                    <p><strong>Tecnologias usadas:</strong></p>
+                    <ul>
+                        <li>Java 17</li>
+                        <li>Spring Boot</li>
+                        <li>Thymeleaf</li>
+                        <li>Bulma CSS</li>
+                        <li>Docker</li>
+                    </ul>
+                    <a href="https://github.com/RodrigoLee56/MeuPortifolio" class="gold-button button mt-2">Ver no
+                        GitHub</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer class="footer has-background-black has-text-white has-text-centered">
-    <div class="content has-text-centered">
-        <p>&copy; 2025 Rodrigo Barbosa De Sousa - Todos os direitos reservados.</p>
-        <div class="mt-4">
-            <a class="gold-text mx-3" href="https://github.com/RodrigoLee56">GitHub</a>
-            <a class="gold-text mx-3" href="https://www.linkedin.com/in/rodrigo-java/">LinkedIn</a>
+    <!-- Footer -->
+    <footer class="footer has-background-black has-text-white has-text-centered">
+        <div class="content has-text-centered">
+            <p>
+                &copy; 2025 Rodrigo Barbosa De Sousa - Todos os direitos reservados.
+            </p>
+            <div class="mt-4">
+                <a class="gold-text mx-3" href="https://github.com/RodrigoLee56">GitHub</a>
+                <a class="gold-text mx-3" href="https://www.linkedin.com/in/rodrigo-java/">LinkedIn</a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script th:src="@{/js/scripts.js}"></script>
+    <script th:src="@{/js/scripts.js}"></script>
 </body>
+
 </html>

@@ -18,6 +18,14 @@
 .gold-text { color: var(--gold) !important; }
 .gold-background { background-color: var(--gold) !important; }
 
+/* ===========================================
+   TIPOGRAFIA
+=========================================== */
+.has-text-justified {
+  text-align: justify;
+}
+
+
 /* Botões */
 .gold-button {
   background-color: var(--gold) !important;
@@ -26,6 +34,30 @@
 }
 .gold-button:hover {
   background-color: #e0b53f !important;
+}
+
+.black-button {
+  background-color: var(--black) !important;
+  color: var(--white) !important;
+  border: none;
+}
+.black-button:hover {
+  background-color: #333333 !important;
+}
+
+/* ===========================================
+   IMAGEM PERFIL
+=========================================== */
+.border-gold-wrapper {
+  display: inline-block;          /* Para encaixar ao tamanho da imagem */
+  padding: 4px;                   /* Espessura da borda */
+  border-radius: 50%;            /* Arredonda o “wrapper” */
+  background-color: var(--gold);     /* Cor dourada */
+}
+.border-gold-wrapper img {
+  display: block;
+  border-radius: 50%;            /* Arredonda a imagem */
+  border: none;                  /* Remove qualquer borda da imagem */
 }
 
 /* ===========================================

@@ -1,11 +1,44 @@
 # 🧑‍💻 Meu Portfólio Pessoal – Rodrigo Barbosa De Sousa
 
-[![Java](https://img.shields.io/badge/Java-17-blue?logo=java)](https://www.oracle.com/java/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.6-brightgreen?logo=springboot)](https://spring.io/projects/spring-boot)
-[![Thymeleaf](https://img.shields.io/badge/Thymeleaf-template-green?logo=thymeleaf)](https://www.thymeleaf.org/)
-[![Docker](https://img.shields.io/badge/Docker-Suporte-blue?logo=docker)](https://www.docker.com/)
-[![Render](https://img.shields.io/badge/Render-Deploy-lightgrey?logo=render)](https://render.com/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+### ☕️ Plataforma & Linguagem
+
+- [![OpenJDK 17](https://github.com/RodrigoLee56/MeuPortifolio/raw/master/src/main/resources/static/images/openjdk17_duke_badge.svg)](https://openjdk.org/)
+- [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.6-brightgreen?logo=springboot)](https://spring.io/projects/spring-boot)
+- [![Thymeleaf](https://img.shields.io/badge/Thymeleaf-template-green?logo=thymeleaf)](https://www.thymeleaf.org/)
+- [![JavaMail](https://img.shields.io/badge/JavaMail-API-orange?logo=java)](https://javaee.github.io/javamail/)
+
+---
+
+### 🛠️ Build & Gerenciamento
+
+- [![Maven](https://img.shields.io/badge/Maven-3.9.6-blue?logo=apache-maven)](https://maven.apache.org/)
+- [![Docker](https://img.shields.io/badge/Docker-Suporte-blue?logo=docker)](https://www.docker.com/)
+
+---
+
+### 🎨 Front-end
+
+- [![Bulma](https://img.shields.io/badge/Bulma-CSS%20Framework-blue?logo=bulma)](https://bulma.io/)
+
+---
+
+### 🧪 Versionamento & Repositório
+
+- [![Git](https://img.shields.io/badge/Git-2.44.0-orange?logo=git)](https://git-scm.com/)
+- [![GitHub](https://img.shields.io/badge/GitHub-Repository-lightgrey?logo=github)](https://github.com/RodrigoLee56)
+
+---
+
+### 🚀 Deploy
+
+- [![Render](https://img.shields.io/badge/Render-Deploy-lightgrey?logo=render)](https://render.com/)
+
+---
+
+### 📄 Licença
+
+- [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+
 
 ---
 
@@ -201,5 +234,5 @@ in the Software without restriction...
 
 ## 📫 Contato
 
-- **LinkedIn**: [Rodrigo Barbosa De Sousa](https://www.linkedin.com/in/rodrigo-barbosa-de-sousa/)  
+- **LinkedIn**: [Rodrigo Barbosa De Sousa](https://www.linkedin.com/in/rodrigo-java/)  
 - **GitHub**: [RodrigoLee56](https://github.com/RodrigoLee56/)
