@@ -2,7 +2,7 @@
 
 ### ☕️ Plataforma & Linguagem
 
-- [![OpenJDK 17](https://github.com/RodrigoLee56/MeuPortifolio/raw/master/src/main/resources/static/images/openjdk17_duke_badge.svg)](https://openjdk.org/)
+- [![OpenJDK 17](https://github.com/RodrigoLee56/MeuPortifolio/raw/master/src/main/resources/static/images/openjdk17_duke_badge.png)](https://openjdk.org/)
 - [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.6-brightgreen?logo=springboot)](https://spring.io/projects/spring-boot)
 - [![Thymeleaf](https://img.shields.io/badge/Thymeleaf-template-green?logo=thymeleaf)](https://www.thymeleaf.org/)
 - [![JavaMail](https://img.shields.io/badge/JavaMail-API-orange?logo=java)](https://javaee.github.io/javamail/)
