@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" th:href="@{/favicon_io/favicon.ico}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rodrigo Barbosa De Sousa - Contato</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -52,6 +53,12 @@
         <div class="container">
             <div class="columns is-centered">
                 <div class="column is-12-mobile is-10-tablet is-8-desktop">
+
+                    <div th:if="${param.sucesso}" class="notification is-success is-light">
+                        <button class="delete" onclick="this.parentElement.style.display='none';"></button>
+                        Sua mensagem foi enviada com sucesso! ✅
+                    </div>
+
                     <form th:action="@{/enviar-mensagem}" method="post" class="box has-background-gold">
                         <div class="field">
                             <label class="label has-text-black" for="nome">Seu Nome</label>

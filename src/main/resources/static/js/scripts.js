@@ -2,11 +2,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.navbar-burger');
   const menu = document.getElementById(burger.dataset.target);
-
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('is-active');
-    menu.classList.toggle('is-active');
-  });
+  if (burger && menu) {
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('is-active');
+      menu.classList.toggle('is-active');
+    });
+  }
 });
 
 // Carousel functionality
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const startAutoPlay = () => {
-      autoPlayInterval = setInterval(nextSlide, 4000); // troca a cada 4 segundos
+      autoPlayInterval = setInterval(nextSlide, 4000);
     };
 
     const resetAutoPlay = () => {
@@ -63,8 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
       startAutoPlay();
     };
 
-    // Inicializa o carrossel
     updateSlides();
     startAutoPlay();
   });
 });
+
+// Clean success param from URL
+if (window.location.search.includes("sucesso=true")) {
+  window.history.replaceState({}, document.title, window.location.pathname);
+}
