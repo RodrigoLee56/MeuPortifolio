@@ -18,7 +18,7 @@ public class EmailConfig {
 		mailSender.setHost(env.getProperty("spring.mail.host"));
 		mailSender.setPort(Integer.parseInt(env.getProperty("spring.mail.port")));
 		mailSender.setUsername(env.getProperty("spring.mail.username"));
-        mailSender.setPassword(env.getProperty("spring.mail.password"));
+		mailSender.setPassword(env.getProperty("spring.mail.password"));
 
 		// Propriedades SMTP
 		Properties props = mailSender.getJavaMailProperties();

@@ -54,24 +54,34 @@
             <div class="columns is-centered">
                 <div class="column is-12-mobile is-10-tablet is-8-desktop">
 
-                    <div th:if="${param.sucesso}" class="notification is-success is-light">
-                        <button class="delete" onclick="this.parentElement.style.display='none';"></button>
-                        Sua mensagem foi enviada com sucesso! ✅
+                    <!-- Mensagem de sucesso -->
+                    <div th:if="${param.sucesso != null}">
+                        <div class="notification is-success has-text-centered">
+                            <strong>Sua mensagem foi enviada com sucesso!</strong>
+                        </div>
                     </div>
 
-                    <form th:action="@{/enviar-mensagem}" method="post" class="box has-background-gold">
+                    <!-- Mensagem de erro -->
+                    <div th:if="${param.erro != null}">
+                        <div class="notification is-danger has-text-centered">
+                            <strong>Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.</strong>
+                        </div>
+                    </div>
+
+
+                    <form th:action="@{/enviar-mensagem}" method="POST" class="box has-background-gold">
                         <div class="field">
                             <label class="label has-text-black" for="nome">Seu Nome</label>
                             <div class="control">
                                 <input type="text" id="nome" name="nome" class="input"
-                                    placeholder="Como devo te chamar?" required />
+                                    placeholder="Por favor, qual seu nome?" required />
                             </div>
                         </div>
                         <div class="field">
                             <label class="label has-text-black" for="email">Seu E-mail</label>
                             <div class="control">
-                                <input type="email" id="email" name="email" class="input"
-                                    placeholder="Para eu responder você" required />
+                                <input type="email" id="email" name="email" class="input" placeholder="Qual seu email?"
+                                    required />
                             </div>
                         </div>
                         <div class="field">
